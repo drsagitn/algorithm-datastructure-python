@@ -1,3 +1,4 @@
+# O(2^n)
 class Solution:
     def subsets(self, nums: [int]) -> [[int]]:
         n = len(nums)
