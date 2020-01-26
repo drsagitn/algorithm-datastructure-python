@@ -84,6 +84,27 @@ print(n.traverse())
 # print(n.is_contains(8))
 # print(n.is_contains(1))
 # print(n.is_contains(0))
+#  1
+#   \
+#    8
+#  /   \
+#  3    9
+
+# remove node with 2 child (remove 8)
+#   1
+#   \
+#    9
+#  /   
+#  3    
+#  remove node with 1 child (remove 1)  
+#    9
+#  /   
+#  3    
+#  remove invalid value (remove 5)
+#   9
+#  /   
+#  3
+#  remove node with no child (remove 3)
 n.remove(8)
 print(n.traverse())
 n.remove(1)
