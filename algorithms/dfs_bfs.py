@@ -40,6 +40,13 @@ pf = PathFinder({'A': ['B', 'C', 'F'],
 print(list(pf.findPathsDFS('A', 'B')))
 
 """
+  A
+/  \
+C   B
+|   | \
+|   D  E
+|     /
+ \___F
 """
 pf2 = PathFinder({'A': set(['B', 'C']),
          'B': set(['A', 'D', 'E']),
