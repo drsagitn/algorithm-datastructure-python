@@ -1,0 +1,26 @@
+"""
+Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+Example:
+
+Given nums = [2, 7, 11, 15], target = 9,
+
+Because nums[0] + nums[1] = 2 + 7 = 9,
+return [0, 1].
+"""
+   
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        h = {}
+        for i, val in enumerate(nums):                    
+            remain = target - val            
+            j = h.get(remain)            
+            if j is not None and i != j:
+                return i, j
+            h[val] = i
+                
+                
+s = Solution()
+print(s.twoSum([3,2,4], 6))
