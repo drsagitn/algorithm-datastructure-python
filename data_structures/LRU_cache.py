@@ -50,6 +50,7 @@ class LRUCache:
                 removed_node = None
                 self.capacity -= 1   
         else:
+            found.value = value
             self.move_to_top(found)
                  
 

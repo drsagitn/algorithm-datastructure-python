@@ -11,6 +11,8 @@ class MaxHeap:
         self.bubble_down(0)        
     
     def peek(self):
+        if len(self.heap) == 0:
+            return 0
         return self.heap[0]
 
     def getLeftChild(self, parentIdx):
