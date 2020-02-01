@@ -12,7 +12,7 @@ return [0, 1].
 """
    
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
+    def twoSum(self, nums: [int], target: int) -> [int]:
         h = {}
         for i, val in enumerate(nums):                    
             remain = target - val            
