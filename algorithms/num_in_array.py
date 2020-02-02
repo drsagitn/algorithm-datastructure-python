@@ -3,7 +3,7 @@ given an array of integers. Consider the whole array as a single integer.
 Increase the single integer by 1 and return as an array
 For example:
 Input: [1,2,3]
-Output: [1,24]
+Output: [1,2,4]
 """
 
 def increase_arr(arr):
