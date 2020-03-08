@@ -30,7 +30,7 @@ class Solution:
             cur = next_
         return pre
     # Current: O(n) of time and O(1) of space
-    # Alternative: push to a arr and check the reversed arr equal
+    # Alternative O(n) space, O(2n) time: push to a arr and check the reversed arr equal
     def isPalindrome(self, head: ListNode) -> bool:
         low = fast = head
         while fast and fast.next:
@@ -44,6 +44,20 @@ class Solution:
             low = low.next
             fast = fast.next
         return True
+    # Phase 1: Reverse the first half while finding the middle.
+    # Phase 2: Compare the reversed first half with the second half.
+    def isPalindrome2(self, head):
+        rev = None
+        slow = fast = head
+        while fast and fast.next:
+            fast = fast.next.next
+            rev, rev.next, slow = slow, rev, slow.next
+        if fast:
+            slow = slow.next
+        while rev and rev.val == slow.val:
+            slow = slow.next
+            rev = rev.next
+        return not rev
 
 s = Solution()
 node = ListNode(1)
