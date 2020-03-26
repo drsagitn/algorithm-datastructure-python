@@ -15,6 +15,7 @@ Example 2:
 Input: head = [1,2], pos = 0
 Output: true
 Explanation: There is a cycle in the linked list, where tail connects to the first node.
+Solution: Floyd's cycle detection algorithm: Tortoise and Hare
 """
 # Definition for singly-linked list.
 class ListNode:

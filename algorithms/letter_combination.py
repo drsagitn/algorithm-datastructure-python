@@ -14,7 +14,7 @@ Although the above answer is in lexicographical order, your answer could be in a
 Accepted
 """
 class Solution:
-    def letterCombinations(self, digits: str) -> List[str]:
+    def letterCombinations(self, digits: str):
         phone = {'2': ['a', 'b', 'c'],
                  '3': ['d', 'e', 'f'],
                  '4': ['g', 'h', 'i'],
